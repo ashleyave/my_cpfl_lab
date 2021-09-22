@@ -1,3 +1,8 @@
+//Name: Ashley A. Avecilla
+//Activity Name: OE3
+//Description: Application of Branching with Conditional Statement
+//Date: September 23, 2021
+
 #include <iostream>
 #include <string>
 
