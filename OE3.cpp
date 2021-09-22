@@ -8,47 +8,44 @@ int main(){
     string e_name, e_ID;
     int num_hours_work, tax_rate;
     double rate_per_hour, gross_pay, tax_D, net_pay;
-
-    cout << "Enter Employee Name         : ";
-    getline (cin, e_name);
-    cout << "Enter Employee ID           : ";
+    
+    cout << "Enter Employee ID            : ";
     getline (cin, e_ID);
-    cout << "Enter Number of hours work  : ";
+    cout << "Enter Employee Name          : ";
+    getline (cin, e_name);
+    cout << "Enter Number of hours worked : ";
     cin >> num_hours_work;
-    cout << "Enter Rate per hour         : ";
+    cout << "Enter Rate per hour          : ";
     cin >> rate_per_hour;
 
-    gross_pay = rate_per_hour*num_hours_work;
+    gross_pay = rate_per_hour * num_hours_work;
 
-    if(num_hours_work == 0 || rate_per_hour == 0){
+    if (num_hours_work == 0 || rate_per_hour == 0){
         cout << "You did not put anything!";
     }
     else if (gross_pay > 40000){
         tax_rate = 12;
         tax_D = gross_pay * 0.12;
         net_pay = gross_pay - tax_D;
-    }else if (gross_pay >= 3000 && gross_pay <= 40000){
+    }else if (gross_pay >= 30000 && gross_pay <= 40000){
         tax_rate = 10;
-        tax_D = gross_pay * 0.10;
+        tax_D = gross_pay * 0.1;
         net_pay = gross_pay - tax_D;
-    }else if ( gross_pay < 2000){
+    }else if (gross_pay < 20000){
         tax_rate = 5;
         tax_D = gross_pay * 0.05;
         net_pay = gross_pay - tax_D;
-    }
-    else{
-        cout << "Invalid input!";
+    }else{
+        cout <<"Invalid input!";
     }
     
     cout <<"\n------------------------------------------------------"<<endl;
-    cout << "Employee Name         : " << e_name          << endl;
-    cout << "Employee ID           : " << e_ID            << endl;
-    cout << "Number of hours work  : " << num_hours_work  << endl;
-    cout << "Your Gross Pay        : " << gross_pay       << endl;
-    cout << "Tax Rate              : " << tax_rate<<"%"   << endl;
-    cout << "Tax Deduction         : " << tax_D           << endl;
+    cout << "Employee ID             : " << e_ID            << endl;
+    cout << "Employee Name           : " << e_name          << endl;
+    cout << "Your Gross Pay          : " << gross_pay       << endl;
+    cout << "Tax Rate                : " << tax_rate<<"%"   << endl;
     cout <<"\n------------------------------------------------------"<<endl;
-    cout << "Your Net Pay          : " << net_pay         << endl;
+    cout << "Your Net Pay            : " << net_pay         << endl;
     cout <<"\n------------------------------------------------------"<<endl;
     
     return 0;
