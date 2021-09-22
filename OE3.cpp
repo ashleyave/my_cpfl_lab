@@ -9,7 +9,7 @@ int main(){
     int num_hours_work, tax_rate;
     double rate_per_hour, gross_pay, tax_D, net_pay;
     
-    cout << "Enter Employee ID            : ";
+    cout << "Enter Employee ID            : "; 
     getline (cin, e_ID);
     cout << "Enter Employee Name          : ";
     getline (cin, e_name);
@@ -18,20 +18,20 @@ int main(){
     cout << "Enter Rate per hour          : ";
     cin >> rate_per_hour;
 
-    gross_pay = rate_per_hour * num_hours_work;
+    gross_pay = rate_per_hour * num_hours_work; // Salary is computed based on hours worked and rate per hour 
 
     if (num_hours_work == 0 || rate_per_hour == 0){
         cout << "You did not put anything!";
     }
-    else if (gross_pay > 40000){
+    else if (gross_pay > 40000){  // Salary range is >40000    
         tax_rate = 12;
         tax_D = gross_pay * 0.12;
         net_pay = gross_pay - tax_D;
-    }else if (gross_pay >= 30000 && gross_pay <= 40000){
+    }else if (gross_pay >= 30000 && gross_pay <= 40000){ // Salary range is 30000-40000  
         tax_rate = 10;
         tax_D = gross_pay * 0.1;
         net_pay = gross_pay - tax_D;
-    }else if (gross_pay < 20000){
+    }else if (gross_pay < 20000){ // Salary range is <20000  
         tax_rate = 5;
         tax_D = gross_pay * 0.05;
         net_pay = gross_pay - tax_D;
