@@ -63,6 +63,5 @@ int main(){
     else{
         cout <<Employee Status    : Regular";
     }
-    
     return 0;
 }
