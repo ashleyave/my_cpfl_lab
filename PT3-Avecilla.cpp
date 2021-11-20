@@ -24,7 +24,8 @@ int main()
     string cname, pn1, pn2, pn3, p1_id, p2_id, p3_id;
     int pq1, pq2, pq3;
     double pn1_price, pn2_price, pn3_price, t_price, pretax, TAX_d; 
-
+    
+    // User input
     cout << "Enter Customer name   : ";
     getline (cin,cname);
     cout << "Enter product1 name   : ";
